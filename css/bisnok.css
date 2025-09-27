@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+    background-color: white; /* Light golden background color to represent chicken festival */
+    background-image: url('../images/chicken_festival_bg.jpg'); /* Add a background image related to the festival */
+    background-size: cover; /* Ensures the background image covers the entire body */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+    color: #8b4513; /* Dark brown text color for better readability */
+    overflow-x: hidden;
+}
+
+h1 {
+    color: #ff4500; /* Bright orange color for the festival theme */
+    text-align: center;
+    padding: 20px;
+    font-size: 2.5em;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun and festive font */
+}
+
+/* Navigation Bar */
+nav {
+    background-color: white; /* Changed to transparent background */
+    padding: 20px 0;
+    backdrop-filter: blur(60px);
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    border-top: 2px solid #87CEEB;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.menu li {
+    position: relative;
+    margin: 0 20px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #010101;
+    padding: 12px 18px;
+    display: block;
+    transition: all 0.3s ease;
+    font-size: 0.9em;
+    text-shadow: none;
+    font-weight: bold;
+}
+
+.menu li a:hover {
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    min-width: 205px;
+    z-index: 100;
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+}
+
+.dropdown-content li a {
+    padding: 14px 18px;
+    color: #000000;
+    font-size: 0.8em;
+}
+
+.dropdown-content li a:hover {
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.content1 {
+  position: relative;
+  width: 100%; /* Make flexible */
+  max-width: 1500px; /* Adjust to your preferred size */
+  height: 600px;
+  overflow: hidden;
+  margin: 20px auto; /* Center the content */
+  border-radius: 15px; /* Increased border-radius for a smoother look */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
+  margin-top: -80px;
+  border: 2px solid #ccc; /* Added border */
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  transition: transform 0.6s ease-in-out;
+} 
+
+.image {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out; /* Added transform transition */
+  display: block;
+  filter: brightness(1) contrast(1); /* Reset brightness and contrast to default */
+}
+
+.image2 {
+  position: absolute;
+  top: 0;
+  left: 100%; /* Position off-screen initially */
+}
+
+.content1:hover .image-container {
+  transform: translateX(-100%); /* Slide the second image in */
+}
+
+.content1:hover .image1 {
+  opacity: 0.5; /* Optional: Fades the first image */
+  filter: blur(2px);
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+
+.content2-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin: 20px 0;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.content2 img {
+  width: 100%; /* Make flexible */
+  max-width: 500px; /* Image takes 50% of the container width */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4); /* Increased shadow size and opacity */
+  object-fit: cover;
+  border: 2px solid #ffffff; /* Added border */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 0, 0, 0.2); /* Increased additional shadow size and opacity */
+  filter: brightness(1) contrast(1); /* Reset brightness and contrast to default */
+}
+.content2-desc {
+  width: 100%; /* Make flexible */
+  max-width: 50%; /* Description takes the other 50% */
+  text-align: left;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  border: 2px solid #ccc; /* Added border */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.1); /* Added additional shadow */
+  font-weight: bold;
+}
+
+
+.content3 {
+  position: relative;
+  width: 100%; /* Make flexible */
+  max-width: 800px; /* Reduced width */
+  height: 400px; /* Reduced height */
+  overflow: hidden;
+  margin: 20px auto; /* Center the container */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-left: 50px;
+  padding: 0px;
+  background-color: white;
+  margin-bottom: 200px; /* Increased margin bottom to give more space */
+  margin-top: 20px; /* Added margin top to give more space */
+}
+
+.image-container1 {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%; /* Make flexible */
+  max-width: calc(200px * 4); /* Adjusted total width for smaller images */
+  height: 100%;
+  transition: transform 0.8s ease-in-out;
+}
+
+.image {
+  width: 100%; /* Adjust the width */
+  height: 100%; /* Adjust the height */
+  object-fit: cover;
+  flex-shrink: 0;
+  filter: brightness(1) contrast(1); /* Reset brightness and contrast to default */
+}
+
+.content3:hover .image-container1 {
+  animation: slideShow 8s infinite; /* Add animation for slideshow */
+}
+
+@keyframes slideShow {
+  0% {
+      transform: translateX(0);
+  }
+  25% {
+      transform: translateX(-100%);
+  }
+  50% {
+      transform: translateX(-200%);
+  }
+  75% {
+      transform: translateX(-300%);
+  }
+  100% {
+      transform: translateX(0);
+  }
+}
+
+.content4 {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin-top:-1400px;
+  margin-left: 1350px;
+  width: 50px;
+}
+
+.content5 {
+  display: flex;
+  padding: 20px;
+  margin-top:-20px;
+  margin-left: 900px;
+}
+
+.content6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; /* Background transparent */
+    padding: 20px;
+    margin-top: -100px;
+    margin-left: 850px;
+    font-size: 2em;
+    border-radius: 5px; /* Optional: rounded corners */
+    font-weight: bold;  
+    color: red; /* Set text color to red */
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000; /* Add black border to text */
+    height: 300px;
+    background-color: white;
+}

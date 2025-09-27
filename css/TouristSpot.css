@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url(../tourist/background.jpg);
+  color: #FFFFFF;
+  overflow-x: hidden;
+  background-repeat: no-repeat;
+  background-size: 100% 100%; /* Fix the background size to cover the entire viewport */
+}
+
+h1 {
+  color: #FFD700; /* Suggesting a gold color to represent luxury and attraction */
+  text-align: center;
+  padding: 20px;
+  font-size: 2.5em;
+  font-family: 'Georgia', serif; /* Font that gives a classic and elegant look */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adding a shadow for a more prominent effect */
+}
+
+/* Navigation Bar */
+nav {
+  background-color: rgb(255, 255, 255);
+  padding: 20px 0;
+  backdrop-filter: blur(60px);
+  position: relative;
+  z-index: 1000;
+  width: 100%;
+  border-top: 2px solid #87CEEB;
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.menu li {
+  position: relative;
+  margin: 0 20px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #010101;
+  padding: 12px 18px;
+  display: block;
+  transition: all 0.3s ease;
+  font-size: 0.9em;
+  text-shadow: none;
+  font-weight: bold;
+}
+
+.menu li a:hover {
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgb(255, 255, 255);
+  min-width: 205px;
+  z-index: 100;
+  border-radius: 5px;
+  backdrop-filter: blur(5px);
+}
+
+.dropdown-content li a {
+  padding: 14px 18px;
+  color: #000000;
+  font-size: 0.8em;
+}
+
+.dropdown-content li a:hover {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Header */
+header {
+  background-color: #00000080;
+  color: #d8d7e1; /* Changed text color to white */
+  padding: 20px;
+  text-align: center;
+}
+
+/* Slideshow Styles */
+.slideshow-container {
+  max-width: 1300px;
+  max-height: 800px;
+  position: relative;
+  margin: auto;
+  margin-top: 3px;
+  border-radius: 50px;
+  background-color: #00000000;
+}
+
+.mySlides {
+  display: none;
+  position: relative;
+}
+
+.slide-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  text-align: left;
+}
+
+/* Image and Description Styles */
+.slide-content img {
+  width: 50%;
+  height: 600px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.slide-desc {
+  width: 40%;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.slide-desc h3 {
+  color: #FFCC00;
+  margin-bottom: 10px;
+}
+
+.slide-desc p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Navigation Buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 10px; /* Reduced padding to make buttons smaller */
+  color: white;
+  font-weight: bold;
+  font-size: 16px; /* Reduced font size to make buttons smaller */
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  z-index: 2;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .slide-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .slide-content img {
+    width: 80%;
+  }
+
+  .slide-desc {
+    width: 100%;
+  }
+}
+
+button {
+  padding: 5px 10px; /* Reduced padding to make button smaller */
+  font-size: 0.8em; /* Reduced font size to make button smaller */
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(0.95); /* Slightly shrink button on hover */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Space between buttons */
+}
+
+.button-container a {
+  display: inline-block;
+}
+
+.button-container .button-image {
+  width: 50px; /* Make button image smaller */
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.button-container .button-image:hover {
+  transform: scale(1.2) rotate(5deg);
+}

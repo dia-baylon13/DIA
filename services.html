@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/servicesstyle.css">
+    <link rel="icon" href="images/logonoback.png" type="image/icon type">
+    <title>Services</title>
+</head>
+
+<body>
+    <nav>
+        <ul class="menu">
+            <li><a class="active" href="./">HOME</a></li>
+            <li class="dropdown"><a href="#">ABOUT US</a>
+                <ul class="dropdown-content">
+                    <li><a href="./history">History</a></li>
+                    <li><a href="./legend">Legend</a></li>
+                    <li><a href="./bisnok">Bisnok</a></li>
+                </ul>
+            </li>
+            <li class="dropdown"><a href="#">FOR RESIDENTS</a>
+                <ul class="dropdown-content">
+                    <li><a href="./services">Emergency Services</a></li>
+                    <li><a href="./school">Schools and Colleges</a></li>
+                    <li><a href="./barangay">Barangays</a></li>
+                </ul>
+            </li>
+            <li class="dropdown"><a href="#">FOR VISITORS</a>
+                <ul class="dropdown-content">
+                    <li><a href="./map">Map & Location</a></li>
+                    <li><a href="./touristSpot">Travel Information</a></li>
+                    <li><a href="./church">Parish Church</a></li>
+                </ul>
+            </li>
+            <li><a href="./contact">CONTACT US</a></li>
+        </ul>
+    </nav>
+    
+    <div class="title">
+        <h1>Emergency Services and Law Enforcement</h1>
+    </div>
+
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="images/EMERGENCY-transformed.jpeg">
+            <div class="text">Local Disater Risk Reduction and Management Office</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="images/firemen.jpeg">
+            <div class="text">Bureau of Fire Protection</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="images/PNP.jpeg">
+            <div class="text">Philippine National Police</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <div class="descriptions">
+        <div class="slide-desc">
+            <h2>Emergency Response Team</h2>
+            <p>The Municipality of Dumanjug's Emergency Response Team is available 24/7 to respond to any emergency
+                situations. Our team is equipped with modern equipment and well-trained personnel to handle various
+                types of emergencies.</p>
+
+                <p>Emergency Hotline: 0906-935-5955</p>
+        </div>
+
+        <div class="slide-desc">
+            <h2>Fire Department</h2>
+            <p>Our dedicated firefighters are always ready to protect the community. The Dumanjug Fire Department is
+                equipped with modern firefighting equipment and conducts regular training to maintain their readiness in
+                responding to fire emergencies.</p>
+
+                <p>Emergency Hotline: 0997-742-5588   </p>
+        </div>
+
+        <div class="slide-desc">
+            <h2>Police Force</h2>
+            <p>The Philippine National Police (PNP) Dumanjug Station ensures the safety and security of our residents.
+                They maintain peace and order through regular patrols, quick response to emergencies, and community
+                engagement programs.</p>
+
+                <p>Emergency Hotline:  0998-598-6358</p>
+        </div>
+    </div>
+
+    <script src="js/service.js"></script>
+</body>
+
+</html>
